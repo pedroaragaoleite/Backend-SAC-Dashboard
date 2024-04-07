@@ -38,7 +38,7 @@ Angular CLI
 ## Backend Setup
 
 1 - Clone the repository and navigate to the backend directory.
-Markup: git clone https://github.com/pedroaragaoleite/Backend-SAC-Dashboard.git
+> git clone https://github.com/pedroaragaoleite/Backend-SAC-Dashboard.git
 
 2 - Install dependecies
 npm install
