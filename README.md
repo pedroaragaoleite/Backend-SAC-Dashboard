@@ -38,21 +38,21 @@ Angular CLI
 ## Backend Setup
 
 1 - Clone the repository and navigate to the backend directory.
-> git clone https://github.com/pedroaragaoleite/Backend-SAC-Dashboard.git
+$ git clone https://github.com/pedroaragaoleite/Backend-SAC-Dashboard.git
 
 2 - Install dependecies
-npm install
+$npm install
 
 3- Create an .env file in the root directory
 
 4 - Add the database and token information:
-PORT=3000
-DB_HOST= localhost
-DB_PORT= db_port
-DB_USER = root
-DB_PASSWORD = your_password
-DB_DATABASE = sac
-JWT_TOKEN= your_secret_token
+$ PORT=3000
+$ DB_HOST= localhost
+$  DB_PORT= db_port
+$  DB_USER = root
+$  DB_PASSWORD = your_password
+$  DB_DATABASE = sac
+$  JWT_TOKEN= your_secret_token
 
 
 ## Frontend Setup
@@ -60,7 +60,7 @@ JWT_TOKEN= your_secret_token
 1-  Clone the repository and navigate to the frontend directory.
 
 2 - Install dependecies
-npm install
+$ npm install
 
 
 # Development server
