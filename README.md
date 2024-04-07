@@ -26,16 +26,16 @@ This project is a full-stack application designed to provide a dynamic and respo
 * Token/Cookie-Based Authentication: Implements a secure authentication flow, seamlessly connecting with the backend for user sessions.
 
 
-# Getting Started
+## Getting Started
 
-## Installation
+### Installation
 
 Prerequisites
 Node.js and npm (Node Package Manager)
 MySQL Database
 Angular CLI
 
-## Backend Setup
+### Backend Setup
 
 1 - Clone the repository and navigate to the backend directory.
 ```
@@ -60,7 +60,7 @@ DB_DATABASE = sac
 JWT_TOKEN= your_secret_token
 ```
 
-## Frontend Setup
+### Frontend Setup
 
 1-  Clone the repository and navigate to the frontend directory.
 
@@ -69,20 +69,26 @@ JWT_TOKEN= your_secret_token
 npm install
 ```
 
-# Development server
+## Development server
 
-## Frontend
+### Frontend
 
-1 - Run ng serve
+1 - Run 
+```
+ng serve
+```
 
 2 - Navigate to http://localhost:4200/. The application will automatically reload if you change any of the source files.
 
-## Backend
+### Backend
 
 1 - Start Apache and MySQL in XAMPP
-2 - run npm run dev
+2 - run 
+```
+npm run dev
+```
 
-# MySql
+## MySql
 Create the data base using the sac.sql file in the Backend
 
 
@@ -93,54 +99,3 @@ Pedro de Aragão - pedro.aragao.leite@gmail.com
 
 
 
-
-
-## Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
-### General Info
-***
-Write down general information about your project. It is a good idea to always put a project status in the readme file. This is where you can add it. 
-### Screenshot
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
-## Technologies
-***
-A list of technologies used within the project:
-* [Technology name](https://example.com): Version 12.3 
-* [Technology name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
-## Installation
-***
-A little intro about the installation. 
-```
-$ git clone https://example.com
-$ cd ../path/to/the/file
-$ npm install
-$ npm start
-```
-Side information: To use the application in a special environment use ```lorem ipsum``` to start
-## Collaboration
-***
-Give instructions on how to collaborate with your project.
-> Maybe you want to write a quote in this part. 
-> Should it encompass several lines?
-> This is how you do it.
-## FAQs
-***
-A list of frequently asked questions
-1. **This is a question in bold**
-Answer to the first question with _italic words_. 
-2. __Second question in bold__ 
-To answer this question, we use an unordered list:
-* First point
-* Second Point
-* Third point
-3. **Third question in bold**
-Answer to the third question with *italic words*.
-4. **Fourth question in bold**
-| Headline 1 in the tablehead | Headline 2 in the tablehead | Headline 3 in the tablehead |
-|:--------------|:-------------:|--------------:|
-| text-align left | text-align center | text-align right |
