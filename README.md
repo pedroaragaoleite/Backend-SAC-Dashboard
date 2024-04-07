@@ -63,6 +63,9 @@ JWT_TOKEN= your_secret_token
 ### Frontend Setup
 
 1-  Clone the repository and navigate to the frontend directory.
+```
+https://github.com/pedroaragaoleite/Frontend-SAC-Dashboard.git
+```
 
 2 - Install dependecies
 ```
