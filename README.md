@@ -1,4 +1,4 @@
-﻿# Backend-SAC-Dashboard
+﻿# Backend-SAC-Dashboard (Developing)
 
 ## Full Stack Dashboard Project
 This project is a full-stack application designed to provide a dynamic and responsive dashboard for managing users, customers, and projects. The backend is built with Node.js and Express, leveraging MySQL for data storage, while the frontend utilizes Angular 17 along with Tailwind CSS for a modern, responsive user interface. This README outlines the project setup, key features, and how to get started with both the backend and frontend.
