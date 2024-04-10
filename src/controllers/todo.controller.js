@@ -6,11 +6,25 @@ import { validationResult } from "express-validator";
 
 export const getTodos = async (req, res) => {
     try {
-        const todosResult = await Todo.findAll();
+        const todosResult = await Todo.findAll({ raw: true });
+
+        const todosResultsPromises = todosResult.map(result =>
+            User.findAll({ where: { id_user: result.user_id }, raw: true }));
+
+        const allTodosResults = await Promise.all(todosResultsPromises);
+
+        const tasksWithUser = todosResult.map((result, index) => ({
+            ...result,
+            users: allTodosResults[index]
+        }))
+
+        console.log(tasksWithUser);
+
+        // console.log(allTodosResults);
 
         res.status(200).json({
             message: "Todo's list",
-            data: todosResult
+            data: tasksWithUser
         });
 
     } catch (error) {

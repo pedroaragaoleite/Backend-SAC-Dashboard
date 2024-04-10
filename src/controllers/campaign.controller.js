@@ -197,8 +197,8 @@ export const addCampaign = async (req, res) => {
         const [result] = req.body.products;
 
         const brand_id = result.brand_id;
-        const sunglass_units = result.sunglass_units;
-        const eyewear_units = result.eyewear_units;
+        const productA_units = result.productA_units;
+        const productB_units = result.productB_units;
 
         const newCampaign = await Campaign.create({ title, description, start_date, end_date, status, user_id });
         newCampaign.save()
@@ -210,7 +210,7 @@ export const addCampaign = async (req, res) => {
 
         const brandId = await Brand.findOne({ where: { id_brand: brand_id } })
 
-        const campaignProductTeste = await CampaignProduct.create({ campaign_id: campaignId.id_campaign, brand_id: brandId.id_brand, sunglass_units, eyewear_units })
+        const campaignProductTeste = await CampaignProduct.create({ campaign_id: campaignId.id_campaign, brand_id: brandId.id_brand, productA_units, productB_units })
         campaignProductTeste.save();
 
 
@@ -234,11 +234,11 @@ export const updateCampaign = async (req, res) => {
         const id_campaign = req.params.id;
         const { title, description, start_date, end_date, status, user_id } = req.body;
         const [result] = req.body.products;
-        const { sunglass_units, eyewear_units, brand_id } = result;
+        const { productA_units, productB_units, brand_id } = result;
 
 
         await Campaign.update({ title, description, start_date, end_date, status, user_id }, { where: { id_campaign } });
-        await CampaignProduct.update({ sunglass_units, eyewear_units, brand_id }, { where: { campaign_id: id_campaign } });
+        await CampaignProduct.update({ productA_units, productB_units, brand_id }, { where: { campaign_id: id_campaign } });
 
 
         res.status(200).json({

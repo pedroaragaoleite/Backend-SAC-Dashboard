@@ -29,11 +29,11 @@ const CampaignProduct = sequelize.define('CampaignProduct', {
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
     },
-    sunglass_units: {
+    productA_units: {
         type: DataTypes.INTEGER,
         defaultValue: 0
     },
-    eyewear_units: {
+    productB_units: {
         type: DataTypes.INTEGER,
         defaultValue: 0
     }
