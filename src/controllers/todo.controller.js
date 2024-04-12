@@ -13,12 +13,24 @@ export const getTodos = async (req, res) => {
 
         const allTodosResults = await Promise.all(todosResultsPromises);
 
-        const tasksWithUser = todosResult.map((result, index) => ({
-            ...result,
-            users: allTodosResults[index]
-        }))
 
-        console.log(tasksWithUser);
+        const tasksWithUser = todosResult.map((result, index) => {
+
+            const users = allTodosResults[index].map(({ password, email, ...keepRest }) => keepRest);
+
+            return {
+                ...result,
+                users
+            };
+        });
+
+
+        // const tasksWithUser = todosResult.map((result, index) => ({
+        //     ...result,
+        //     users: allTodosResults[index]
+        // }))
+
+        // console.log(tasksWithUser);
 
         // console.log(allTodosResults);
 
@@ -76,6 +88,7 @@ export const deleteTodo = async (req, res) => {
 }
 
 export const updateTodo = async (req, res) => {
+    console.log(req.body);
     try {
         const checkValidation = validationResult(req);
 

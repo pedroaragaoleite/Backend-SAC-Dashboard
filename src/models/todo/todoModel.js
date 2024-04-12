@@ -41,7 +41,6 @@ const Todo = sequelize.define('Todo', {
     },
     customer_id: {
         type: DataTypes.INTEGER(8),
-        allowNull: false,
         references: {
             model: Customer,
             key: 'id_customer'
