@@ -204,8 +204,6 @@ export const addCampaign = async (req, res) => {
         newCampaign.save()
 
 
-
-
         const campaignId = await Campaign.findOne({ where: { id_campaign: newCampaign.id_campaign } })
 
         const brandId = await Brand.findOne({ where: { id_brand: brand_id } })

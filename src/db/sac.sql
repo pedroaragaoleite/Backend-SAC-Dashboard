@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-04-2024 a las 21:32:26
+-- Tiempo de generación: 14-04-2024 a las 20:07:13
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -39,16 +39,16 @@ CREATE TABLE `brands` (
 --
 
 INSERT INTO `brands` (`id_brand`, `brand`, `created_at`, `updated_at`) VALUES
-(1, 'Ray-Ban', '2024-03-29 12:13:32', '2024-03-29 12:13:32'),
-(2, 'Oakley', '2024-03-29 12:13:43', '2024-03-29 12:13:43'),
-(3, 'Prada', '2024-03-29 12:14:05', '2024-03-29 12:14:05'),
-(4, 'Gucci', '2024-03-29 12:15:36', '2024-03-29 12:15:36'),
-(5, 'Versace', '2024-03-29 12:15:36', '2024-03-29 12:15:36'),
-(6, 'Armani', '2024-03-29 12:15:36', '2024-03-29 12:15:36'),
-(7, 'Burberry', '2024-03-29 12:15:36', '2024-03-29 12:15:36'),
-(8, 'Dolce & Gabbana', '2024-03-29 12:15:36', '2024-03-29 12:15:36'),
-(9, 'Arnette', '2024-03-29 12:15:36', '2024-03-29 12:15:36'),
-(10, 'Channel', '2024-03-29 12:15:36', '2024-03-29 12:15:36');
+(1, 'Brand A', '2024-03-29 12:13:32', '2024-03-29 12:13:32'),
+(2, 'Brand B', '2024-03-29 12:13:43', '2024-03-29 12:13:43'),
+(3, 'Brand C', '2024-03-29 12:14:05', '2024-03-29 12:14:05'),
+(4, 'Brand D', '2024-03-29 12:15:36', '2024-03-29 12:15:36'),
+(5, 'Brand E', '2024-03-29 12:15:36', '2024-03-29 12:15:36'),
+(6, 'Brand F', '2024-03-29 12:15:36', '2024-03-29 12:15:36'),
+(7, 'Brand G', '2024-03-29 12:15:36', '2024-03-29 12:15:36'),
+(8, 'Brand H', '2024-03-29 12:15:36', '2024-03-29 12:15:36'),
+(9, 'Brand I', '2024-03-29 12:15:36', '2024-03-29 12:15:36'),
+(10, 'Brand J', '2024-03-29 12:15:36', '2024-03-29 12:15:36');
 
 -- --------------------------------------------------------
 
@@ -60,8 +60,8 @@ CREATE TABLE `campaignproducts` (
   `id_campaign_product` int(11) NOT NULL,
   `campaign_id` int(11) DEFAULT NULL,
   `brand_id` int(11) DEFAULT NULL,
-  `sunglass_units` int(11) DEFAULT 0,
-  `eyewear_units` int(11) DEFAULT 0,
+  `productA_units` int(11) DEFAULT 0,
+  `productB_units` int(11) DEFAULT 0,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -70,17 +70,27 @@ CREATE TABLE `campaignproducts` (
 -- Volcado de datos para la tabla `campaignproducts`
 --
 
-INSERT INTO `campaignproducts` (`id_campaign_product`, `campaign_id`, `brand_id`, `sunglass_units`, `eyewear_units`, `createdAt`, `updatedAt`) VALUES
-(1, 1, 1, 150, 50, '2024-03-29 12:22:24', '2024-04-05 05:35:40'),
-(2, 2, 2, 200, 100, '2024-03-29 12:22:24', '2024-03-29 12:22:24'),
-(3, 3, 3, 150, 75, '2024-03-29 12:22:24', '2024-03-29 12:22:24'),
-(6, 6, 6, 100, 50, '2024-03-29 12:22:24', '2024-04-04 04:58:02'),
-(7, 7, 7, 200, 100, '2024-03-29 12:22:24', '2024-03-29 12:22:24'),
-(8, 8, 8, 150, 75, '2024-03-29 12:22:24', '2024-03-29 12:22:24'),
-(9, 9, 9, 100, 25, '2024-03-29 12:22:24', '2024-03-29 12:22:24'),
-(10, 10, 10, 80, 40, '2024-03-29 12:22:24', '2024-04-04 05:06:03'),
-(14, 29, 1, 50, 50, '2024-03-30 16:38:09', '2024-03-30 16:38:09'),
-(20, 38, 1, 100, 50, '2024-04-05 05:29:07', '2024-04-05 05:29:07');
+INSERT INTO `campaignproducts` (`id_campaign_product`, `campaign_id`, `brand_id`, `productA_units`, `productB_units`, `createdAt`, `updatedAt`) VALUES
+(1, 1, 1, 100, 50, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(2, 2, 2, 150, 60, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(3, 3, 3, 200, 70, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(4, 4, 4, 250, 80, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(5, 5, 5, 300, 90, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(6, 6, 6, 350, 100, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(7, 7, 7, 400, 110, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(8, 8, 8, 450, 120, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(9, 9, 9, 500, 130, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(10, 10, 10, 550, 140, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(11, 11, 1, 600, 150, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(12, 12, 2, 650, 160, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(13, 13, 3, 700, 170, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(14, 14, 4, 750, 180, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(15, 15, 5, 800, 190, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(16, 16, 6, 850, 200, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(17, 17, 7, 900, 210, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(18, 18, 8, 950, 220, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(19, 19, 9, 1000, 230, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(20, 20, 10, 1050, 240, '2024-04-09 19:15:40', '2024-04-09 19:15:40');
 
 -- --------------------------------------------------------
 
@@ -105,16 +115,26 @@ CREATE TABLE `campaigns` (
 --
 
 INSERT INTO `campaigns` (`id_campaign`, `title`, `description`, `start_date`, `end_date`, `status`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'Campaña Verano 2024', 'Promoción de verano para gafas de sol y de vista.', '2024-01-01 00:00:00', '2024-04-04 06:57:00', 'active', 5, '2024-03-29 12:19:43', '2024-04-05 05:35:40'),
-(2, 'Lanzamiento Otoño 2024', 'Nueva colección de otoño para gafas de sol y de vista.', '2024-02-01 00:00:00', '2024-03-30 00:00:00', 'active', 7, '2024-03-29 12:19:43', '2024-03-29 12:19:43'),
-(3, 'Promoción Primavera 2024', 'Descuentos especiales en gafas de vista para la primavera.', '2024-03-01 00:00:00', '2024-05-31 00:00:00', 'active', 8, '2024-03-29 12:19:43', '2024-03-29 12:19:43'),
-(6, 'Campaña Verano 2024', 'Promoción de verano para gafas de sol y de vista.', '2024-04-01 00:00:00', '2024-05-20 04:57:00', 'active', 5, '2024-03-29 12:19:43', '2024-04-04 04:58:02'),
-(7, 'Lanzamiento Otoño 2024', 'Nueva colección de otoño para gafas de sol y de vista.', '2024-05-01 00:00:00', '2024-08-30 00:00:00', 'finished', 7, '2024-03-29 12:19:43', '2024-03-29 12:19:43'),
-(8, 'Promoción Primavera 2024', 'Descuentos especiales en gafas de vista para la primavera.', '2024-06-01 00:00:00', '2024-08-31 00:00:00', 'active', 8, '2024-03-29 12:19:43', '2024-03-29 12:19:43'),
-(9, 'Exclusiva Arnette', 'Lanzamiento exclusivo de modelos de Arnette.', '2024-07-15 00:00:00', '2024-09-15 00:00:00', 'inactive', 9, '2024-03-29 12:19:43', '2024-03-29 12:19:43'),
-(10, 'Ofertas Summer 2024', 'Ofertas únicas para Black Friday en todas las marcas.', '2024-08-24 00:00:00', '2024-07-25 00:00:00', 'inactive', 27, '2024-03-29 12:19:43', '2024-04-04 05:06:03'),
-(29, 'teste', 'testetestetesteteste', '2024-03-31 15:30:00', '2024-04-07 15:30:00', 'active', 11, '2024-03-30 16:38:09', '2024-03-30 16:38:09'),
-(38, 'Campaña Verano 2025', 'Promoción de verano para gafas de sol y de vista.', '2024-01-01 00:00:00', '2024-04-04 06:57:00', 'active', 6, '2024-04-05 05:29:07', '2024-04-05 05:29:07');
+(1, 'Spring Sale', 'Discounts on spring collection', '2024-04-01 00:00:00', '2024-04-30 23:59:59', 'active', 3, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(2, 'Summer Fest', 'Special offers on summer essentials', '2024-06-01 00:00:00', '2024-06-30 23:59:59', 'active', 4, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(3, 'Back to School', 'Promotions on school supplies', '2024-08-01 00:00:00', '2024-08-31 23:59:59', 'active', 3, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(4, 'Winter Wonderland', 'Deals on winter gear and clothing', '2024-11-01 00:00:00', '2024-12-31 23:59:59', 'active', 4, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(5, 'Tech Tuesday', 'Technology and gadget sale', '2024-05-02 00:00:00', '2024-05-02 23:59:59', 'active', 3, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(6, 'Home Makeover', 'Discounts on home decor and furniture', '2024-09-15 00:00:00', '2024-10-15 23:59:59', 'active', 4, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(7, 'Fitness Frenzy', 'Sales on fitness equipment and wearables', '2024-01-10 00:00:00', '2024-01-31 23:59:59', 'active', 3, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(8, 'Beauty Bash', 'Promotions on beauty products', '2024-03-08 00:00:00', '2024-03-08 23:59:59', 'active', 4, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(9, 'Auto Accessories Sale', 'Deals on car accessories', '2024-07-20 00:00:00', '2024-08-20 23:59:59', 'active', 3, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(10, 'Gourmet Week', 'Special offers on gourmet foods', '2024-10-10 00:00:00', '2024-10-17 23:59:59', 'active', 4, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(11, 'Pet Care Discounts', 'Discounts on pet care supplies', '2024-02-01 00:00:00', '2024-02-28 23:59:59', 'active', 3, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(12, 'Book Lover Days', 'Sales on literature and novels', '2024-04-23 00:00:00', '2024-04-30 23:59:59', 'active', 4, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(13, 'Kids’ Corner', 'Promotions on kids’ toys and clothes', '2024-05-15 00:00:00', '2024-06-15 23:59:59', 'active', 3, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(14, 'Gaming Marathon', 'Deals on video games and accessories', '2024-07-05 00:00:00', '2024-07-12 23:59:59', 'active', 4, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(15, 'Outdoor Adventures', 'Sales on camping and outdoor gear', '2024-08-25 00:00:00', '2024-09-25 23:59:59', 'active', 3, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(16, 'Fashion Forward', 'Discounts on the latest fashion trends', '2024-09-20 00:00:00', '2024-10-20 23:59:59', 'active', 4, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(17, 'DIY Deals', 'Promotions on DIY tools and materials', '2024-03-01 00:00:00', '2024-03-31 23:59:59', 'active', 3, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(18, 'Smart Home Sale', 'Deals on smart home devices', '2024-06-05 00:00:00', '2024-07-05 23:59:59', 'active', 4, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(19, 'Luxury for Less', 'Luxury items at discounted prices', '2024-11-15 00:00:00', '2024-12-15 23:59:59', 'active', 3, '2024-04-09 19:15:40', '2024-04-09 19:15:40'),
+(20, 'New Year, New Gear', 'Sales to kickstart the new year', '2025-01-01 00:00:00', '2025-01-31 23:59:59', 'active', 4, '2024-04-09 19:15:40', '2024-04-09 19:15:40');
 
 -- --------------------------------------------------------
 
@@ -139,38 +159,27 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id_customer`, `name`, `email`, `address`, `city`, `postal_code`, `phone`, `created_at`, `updated_at`) VALUES
-(1001, 'Óptica Luminar', 'opticaluminar@teste.com', 'Calle Sol, 22', 'Madrid', 28001, 912345678, '2024-03-28 16:01:23', '2024-04-04 05:20:58'),
-(1002, 'Visión Clara', 'visionclara@teste.com', 'Avenida Luna, 33', 'Barcelona', 8002, 932345679, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1003, 'Mirada Perfecta', 'miradaperfecta@teste.com', 'Plaza Mayor, 44', 'Valencia', 46001, 962345670, '2024-03-28 16:01:23', '2024-04-04 05:35:26'),
-(1004, 'VistaVal', 'vistaval@teste.com', 'Calle Jardín, 55', 'Sevilla', 41001, 952345671, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1005, 'Óptica Sol', 'opticasol@teste.com', 'Gran Vía, 66', 'Zaragoza', 50001, 976345672, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1006, 'Luces del Día', 'lucesdeldia@teste.com', 'Calle Estrella, 77', 'Málaga', 29001, 952345673, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1007, 'Óptica Mar', 'opticamar@teste.com', 'Calle Océano, 88', 'Murcia', 30001, 968345674, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1008, 'Claridad', 'claridad@teste.com', 'Calle Río, 99', 'Palma de Mallorca', 7001, 971345675, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1009, 'Foco Visual', 'focovisual@teste.com', 'Avenida Montaña, 101', 'Las Palmas', 35001, 928345676, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1010, 'Visión de Águila', 'visiondeaguila@teste.com', 'Plaza del Sol, 112', 'Bilbao', 48001, 944345677, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1011, 'Perspectiva', 'perspectiva@teste.com', 'Calle Nueva, 123', 'Alicante', 3001, 965345678, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1012, 'Óptica Prisma', 'opticaprisma@teste.com', 'Avenida del Mar, 134', 'Córdoba', 14001, 957345679, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1013, 'Espejismo', 'espejismo@teste.com', 'Calle Real, 145', 'Valladolid', 47001, 983345680, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1014, 'Luz y Visión', 'luzvision@teste.com', 'Plaza de la Luz, 156', 'Vitoria', 1001, 945345681, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1015, 'Óptica del Norte', 'opticadelnorte@teste.com', 'Avenida de la Estrella, 167', 'Oviedo', 33001, 985345682, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1016, 'Visión Futura', 'visionfutura@teste.com', 'Calle del Futuro, 178', 'Santander', 39001, 942345683, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1017, 'Mirada Profunda', 'miradaprofunda@teste.com', 'Calle Profunda, 189', 'Toledo', 45001, 925345684, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1018, 'Óptica del Sol', 'opticadelsol@teste.com', 'Plaza Solar, 200', 'León', 24001, 987345685, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1019, 'Gran Visión', 'granvision@teste.com', 'Avenida Grande, 211', 'Tarragona', 43001, 977345686, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1020, 'Visión Perfecta', 'visionperfecta@teste.com', 'Calle Vista, 222', 'Lleida', 25001, 973345687, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1021, 'Punto de Vista', 'puntodevista@teste.com', 'Avenida Punto, 233', 'Girona', 17001, 972345688, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1022, 'Óptica Luz', 'opticaluz@teste.com', 'Calle Luminosa, 244', 'Huesca', 22001, 974345689, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1023, 'Espectro Visual', 'espectrovisual@teste.com', 'Plaza Espectro, 255', 'Pamplona', 31001, 948345690, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1024, 'Clarividencia', 'clarividencia@teste.com', 'Avenida Claridad, 266', 'Logroño', 26001, 941345691, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1025, 'Lentes del Futuro', 'lentesdelfuturo@teste.com', 'Calle del Mañana, 277', 'Santiago de Compostela', 15701, 981345692, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1026, 'Mirada del Águila', 'miradadelaguila@teste.com', 'Plaza de la Visión, 288', 'Segovia', 40001, 921345693, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1027, 'Óptica del Pueblo', 'opticadelpueblo@teste.com', 'Avenida del Campo, 299', 'Salamanca', 37001, 923345694, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1028, 'Visionarios', 'visionarios@teste.com', 'Calle de los Sueños, 310', 'Cádiz', 11001, 956345695, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1029, 'Óptica Centenario', 'opticacentenario@teste.com', 'Plaza Centenaria, 321', 'Badajoz', 6001, 924345696, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1030, 'La Mirada Clara', 'lamiradaclara@teste.com', 'Calle Clara, 332', 'Melilla', 52001, 952345697, '2024-03-28 16:01:23', '2024-03-28 16:01:23'),
-(1031, 'teste', 'customer1@teste.com', 'calle bla blasasdsdsaddsadasdsadsad', 'Salou', 55555, 939393939, '2024-03-28 15:52:42', '2024-03-28 18:40:48'),
-(1035, 'Pedro blaaa', 'pedro@teste.com', 'calle bla bla bla bla', 'CAMBRILS', 43850, 664711380, '2024-04-04 05:26:56', '2024-04-04 05:33:33');
+(0, 'New user', 'newuser@newuser.com', 'newuser@newuser.com', 'Barcelona', 43850, 939393939, '2024-04-11 18:20:12', '2024-04-11 18:20:12'),
+(1000, 'La Joya del Pan', 'contacto@lajoyadelpan.es', 'Calle Panaderos 45', 'Madrid', 28013, 910000001, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1001, 'Modas Sol', 'info@modassol.es', 'Avenida Libertad 32', 'Barcelona', 8005, 930000002, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1002, 'Librería del Saber', 'servicio@libreriadelsaber.es', 'Plaza de Cervantes 10', 'Salamanca', 37002, 923000003, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1003, 'ElectroHogar', 'contacto@electrohogar.es', 'Calle de los Electrodomésticos 22', 'Valencia', 46001, 960000004, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1004, 'Bicicletas Veloz', 'ventas@bicicletasveloz.es', 'Paseo de la Bicicleta 58', 'Sevilla', 41010, 955000005, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1005, 'Dulces Sueños', 'pedidos@dulcessuenos.es', 'Calle del Roscón 15', 'Zaragoza', 50001, 976000006, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1006, 'Regalos Originales', 'info@regalosoriginales.es', 'Avenida de la Fantasía 78', 'Málaga', 29018, 952000007, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1007, 'Todo Mascotas', 'contacto@todomascotas.es', 'Calle de los Animales 12', 'Bilbao', 48009, 944000008, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1008, 'El Rincón del Arte', 'servicio@elrincondelarte.es', 'Plaza de los Pintores 5', 'Granada', 18010, 958000009, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1009, 'Deportes Aventura', 'ventas@deportesaventura.es', 'Camino del Deporte 22', 'Gijón', 33203, 984000010, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1010, 'La Casa del Libro', 'info@lacasadelibro.es', 'Calle de la Lectura 33', 'Santander', 39001, 942000011, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1011, 'Joyería del Sol', 'contacto@joyeriadelsol.es', 'Avenida Brillante 44', 'Córdoba', 14010, 957000012, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1012, 'Papelería Moderna', 'ventas@papeleriamoderna.es', 'Plaza del Papel 28', 'Vigo', 36201, 986000013, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1013, 'Muebles y Diseño', 'info@mueblesydiseño.es', 'Calle de la Decoración 9', 'Palma', 7001, 971000014, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1014, 'Tecnología de Punta', 'contacto@tecnologiadepunta.es', 'Avenida del Futuro 76', 'Las Palmas', 35010, 928000015, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1015, 'El Armario de Moda', 'servicio@elarmariodemoda.es', 'Paseo de la Moda 12', 'Alicante', 3003, 965000016, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1016, 'Zapatería el Paso', 'ventas@zapateriaelpaso.es', 'Calle del Calzado 34', 'Murcia', 30004, 968000017, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1017, 'Perfumería Esencia', 'info@perfumeriaesencia.es', 'Plaza de los Aromas 7', 'Toledo', 45001, 925000018, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1018, 'Complementos Chic', 'contacto@complementoschic.es', 'Avenida de la Elegancia 82', 'Lleida', 25002, 973000019, '2024-04-09 18:41:20', '2024-04-09 18:41:20'),
+(1019, 'Juguetes Fantasía', 'servicio@juguetesfantasia.es', 'Calle de la Imaginación 48', 'Oviedo', 33006, 985000020, '2024-04-09 18:41:20', '2024-04-09 18:41:20');
 
 -- --------------------------------------------------------
 
@@ -202,7 +211,7 @@ INSERT INTO `interactions` (`id_interaction`, `name_interaction`, `createdAt`, `
 
 CREATE TABLE `interaction_options` (
   `id_option` int(8) UNSIGNED NOT NULL,
-  `id_interaction` int(10) UNSIGNED NOT NULL,
+  `interaction_id` int(10) UNSIGNED NOT NULL,
   `name_option` varchar(50) NOT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL
@@ -212,7 +221,7 @@ CREATE TABLE `interaction_options` (
 -- Volcado de datos para la tabla `interaction_options`
 --
 
-INSERT INTO `interaction_options` (`id_option`, `id_interaction`, `name_option`, `createdAt`, `updatedAt`) VALUES
+INSERT INTO `interaction_options` (`id_option`, `interaction_id`, `name_option`, `createdAt`, `updatedAt`) VALUES
 (1, 1, 'create_order', '2024-03-22 09:45:11', '2024-03-22 09:45:11'),
 (2, 1, 'update_order', '2024-03-22 09:45:11', '2024-03-22 09:45:11'),
 (3, 1, 'cancel_order', '2024-03-22 09:45:11', '2024-03-22 09:45:11'),
@@ -239,8 +248,8 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id_role`, `role_name`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '2024-03-21 16:30:27', '2024-03-21 16:30:27'),
-(2, 'supervisor', '2024-03-21 16:30:27', '2024-03-21 16:30:27'),
+(1, 'Admin', '2024-03-21 16:30:27', '2024-03-21 16:30:27'),
+(2, 'Supervisor', '2024-03-21 16:30:27', '2024-03-21 16:30:27'),
 (3, 'Inbound', '2024-03-21 16:30:59', '2024-03-21 16:30:59'),
 (4, 'Outbound', '2024-03-21 16:30:59', '2024-03-21 16:30:59');
 
@@ -258,7 +267,7 @@ CREATE TABLE `todos` (
   `status` enum('new','pending','in progress','completed') NOT NULL DEFAULT 'new',
   `priority` enum('low','medium','high') NOT NULL DEFAULT 'low',
   `user_id` int(8) UNSIGNED NOT NULL,
-  `customer_id` int(8) NOT NULL,
+  `customer_id` int(8) DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -268,24 +277,27 @@ CREATE TABLE `todos` (
 --
 
 INSERT INTO `todos` (`id_todo`, `title`, `assigned_date`, `due_date`, `status`, `priority`, `user_id`, `customer_id`, `created_at`, `updated_at`) VALUES
-(39, 'Inquiry on latest eyewear collection 2024', '2024-03-22 00:00:00', '2024-03-29 00:00:00', 'completed', 'high', 1, 1010, '2024-04-02 18:04:00', '2024-04-04 16:00:13'),
-(40, 'Warranty claim for defective lenses', '2024-03-23 00:00:00', '2024-04-02 00:00:00', 'completed', 'high', 2, 1001, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(41, 'Restock request for popular sunglasses model', '2024-03-24 00:00:00', '2024-03-31 00:00:00', 'completed', 'high', 5, 1002, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(42, 'Technical support for online catalog', '2024-03-25 00:00:00', '2024-03-30 00:00:00', 'completed', 'medium', 6, 1003, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(43, 'Follow-up on delayed shipment', '2024-03-26 00:00:00', '2024-04-05 00:00:00', 'in progress', 'medium', 7, 1004, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(44, 'Bulk order inquiry from optician shop', '2024-03-27 00:00:00', '2024-04-03 00:00:00', 'in progress', 'high', 8, 1005, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(45, 'Customer complaint: Incorrect prescription', '2024-03-28 00:00:00', '2024-04-04 00:00:00', 'in progress', 'high', 9, 1006, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(46, 'Feedback request for service improvement', '2024-03-29 00:00:00', '2024-04-06 00:00:00', 'in progress', 'low', 11, 1007, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(47, 'Urgent: Defective frame replacement', '2024-03-30 00:00:00', '2024-04-07 00:00:00', 'pending', 'high', 21, 1008, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(48, 'Inquiry on UV protection range', '2024-03-31 00:00:00', '2024-04-08 00:00:00', 'pending', 'medium', 22, 1009, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(49, 'Complaint: Late delivery', '2024-04-01 00:00:00', '2024-04-09 00:00:00', 'pending', 'medium', 23, 1010, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(50, 'Update request on warranty claim status', '2024-04-02 00:00:00', '2024-04-10 00:00:00', 'new', 'medium', 24, 1011, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(51, 'Restock of limited edition frames', '2024-04-03 00:00:00', '2024-04-11 00:00:00', 'new', 'high', 25, 1012, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(52, 'Query on eco-friendly eyewear options', '2024-04-04 00:00:00', '2024-04-12 00:00:00', 'new', 'low', 5, 1013, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(53, 'Setup assistance for new eyewear display', '2024-04-05 00:00:00', '2024-04-13 00:00:00', 'new', 'low', 5, 1014, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(54, 'Product training request for staff', '2024-04-06 00:00:00', '2024-04-14 00:00:00', 'new', 'medium', 5, 1015, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(55, 'Order adjustment for special offer', '2024-04-07 00:00:00', '2024-04-15 00:00:00', 'new', 'medium', 5, 1016, '2024-04-02 18:04:00', '2024-04-02 18:04:00'),
-(56, 'Feedback on recent purchase', '2024-04-08 00:00:00', '2024-04-16 00:00:00', 'new', 'low', 5, 1017, '2024-04-02 18:04:00', '2024-04-02 18:04:00');
+(1, 'Email Regalos Originales discount codes', '2024-04-10 00:00:00', '2024-04-12 00:00:00', 'pending', 'high', 3, 1000, '2024-04-09 19:05:23', '2024-04-11 13:01:53'),
+(2, 'Email Modas Sol about new collection', '2024-04-10 00:00:00', '2024-04-15 00:00:00', 'new', 'medium', 4, 1001, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(3, 'Schedule meeting with Librería del Saber', '2024-04-11 00:00:00', '2024-04-18 00:00:00', 'new', 'high', 3, 1002, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(4, 'Confirm shipment arrival to ElectroHogar', '2024-04-12 00:00:00', '2024-04-14 00:00:00', 'pending', 'medium', 4, 1003, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(5, 'Send promotional material to Bicicletas Veloz', '2024-04-13 00:00:00', '2024-04-20 00:00:00', 'in progress', 'low', 3, 1004, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(6, 'Call Dulces Sueños for payment confirmation', '2024-04-14 00:00:00', '2024-04-16 00:00:00', 'pending', 'high', 4, 1005, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(7, 'Email Regalos Originales discount codes', '2024-04-15 00:00:00', '2024-04-22 00:00:00', 'new', 'low', 3, 1006, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(8, 'Update Todo Mascotas on order status', '2024-04-16 00:00:00', '2024-04-18 00:00:00', 'in progress', 'medium', 4, 1007, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(9, 'Prepare annual review for El Rincón del Arte', '2024-04-17 00:00:00', '2024-04-25 00:00:00', 'pending', 'high', 3, 1008, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(10, 'Follow up on Deportes Aventura warranty claim', '2024-04-18 00:00:00', '2024-04-19 00:00:00', 'completed', 'medium', 43, 1009, '2024-04-09 19:05:23', '2024-04-11 06:23:55'),
+(11, 'Renew contract with La Casa del Libro', '2024-04-19 00:00:00', '2024-04-26 00:00:00', 'new', 'high', 3, 1010, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(12, 'Check inventory levels at Joyería del Sol', '2024-04-20 00:00:00', '2024-04-23 00:00:00', 'pending', 'low', 43, 1011, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(13, 'Organize marketing event with Papelería Moderna', '2024-04-21 00:00:00', '2024-04-29 00:00:00', 'new', 'medium', 3, 1012, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(14, 'Update software for Muebles y Diseño', '2024-04-22 00:00:00', '2024-04-24 00:00:00', 'in progress', 'high', 4, 1013, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(15, 'Conduct training session for Tecnología de Punta staff', '2024-04-23 00:00:00', '2024-04-30 00:00:00', 'pending', 'low', 3, 1014, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(16, 'Review sales strategy with El Armario de Moda', '2024-04-24 00:00:00', '2024-04-27 00:00:00', 'new', 'medium', 43, 1015, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(17, 'Negotiate new lease terms with Zapatería el Paso', '2024-04-25 00:00:00', '2024-05-02 00:00:00', 'in progress', 'high', 3, 1016, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(18, 'Email Perfumería Esencia rebranding proposal', '2024-04-26 00:00:00', '2024-04-28 00:00:00', 'pending', 'medium', 4, 1017, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(19, 'Plan holiday season display for Complementos Chic', '2024-04-27 00:00:00', '2024-05-05 00:00:00', 'new', 'low', 3, 1018, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(20, 'Finalize annual order with Juguetes Fantasía', '2024-04-28 00:00:00', '2024-04-30 00:00:00', 'completed', 'high', 4, 1019, '2024-04-09 19:05:23', '2024-04-09 19:05:23'),
+(99, 'Create user', '2024-04-11 18:08:00', '2024-04-26 18:08:00', 'in progress', 'high', 1, 0, '2024-04-11 18:08:26', '2024-04-12 05:36:34');
 
 -- --------------------------------------------------------
 
@@ -330,26 +342,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `email`, `password`, `username`, `role`, `created_at`, `updated_at`) VALUES
-(1, 'teste@teste.com', '$2b$10$eZF9iOKmItVrWIY37rR6a..E7lHFljuis.4mlaHr9AD15Iuw1w4eS', 'Pedro', 'admin', '2024-03-21 18:11:10', '2024-04-05 09:26:32'),
-(2, 'teste1@teste.com', '$2b$10$5/C6N36HGUNdB9KNZJn78ehZg0LeT.yT3/wEV2V6FFy441bCrzC9m', 'Eneida', 'admin', '2024-03-21 18:12:19', '2024-04-04 04:06:52'),
-(5, 'user@teste.com', '$2b$10$2eQ.EXoUAnydUu38fB7cOeY6Ya9t0N5b09x4X2egH4eM46fBoBO7O', 'user', 'Outbound', '2024-03-22 09:59:09', '2024-03-27 16:38:18'),
-(6, 'user1@teste.com', '$2b$10$6iUofp0fmTTbdiWGHku7euNAt1b8vvQRJfx2i0hREzerObx.pv1uq', 'user14', 'supervisor', '2024-03-22 09:59:40', '2024-03-28 10:43:42'),
-(7, 'teste2@teste.com', '$2b$10$jmeiXGc5kFk2qRSreWGUqehrk0goPFrAlB1rkc8hU1eLVAWhUr.JC', 'teste2', 'Outbound', '2024-03-27 11:09:43', '2024-03-27 16:38:54'),
-(8, 'teste3@teste.com', '$2b$10$dMrwyPB1KkXJnz6JV84aa.slmv1m2PI5RNgon12pJMmEh6GYEsAYi', 'teste3', 'Outbound', '2024-03-27 11:10:43', '2024-03-27 16:39:51'),
-(9, 'teste@teste.coms', '$2b$10$aZ5xsVzcidiDGWQCBBNUm.aBFjgenqzXG.daEHFMtQaQ1iNULBwrS', 'joana', 'Outbound', '2024-03-27 13:47:58', '2024-03-27 16:40:02'),
-(11, 'test5@teste.com', '$2b$10$vSnoel1LKKjbBfGtX63FUeNZZxnk7z95Wm8vMV40qY3XmwjfCjN9u', 'teste5', 'Inbound', '2024-03-27 14:43:19', '2024-03-27 16:38:40'),
-(21, 'supervisor@teste.com', '$2b$10$TmGbnho3uVcDQJIdU5zrZub69WdqSTqNh0XeSTms/qvB.SoEsIpBG', 'supervisor', 'supervisor', '2024-03-28 17:53:26', '2024-03-28 17:53:26'),
-(22, 'inbound1@inboud.com', '$2b$10$LNAFzU1yrP3uctbn2c0T..wGVRfUSKiAI1v7ia9c7QgsP0DKvgaBm', 'inbound1', 'Inbound', '2024-03-31 19:57:38', '2024-04-05 09:32:46'),
-(23, 'inbound2@inboud.com', '$2b$10$vyMoN/3MaGyexkzSuhefRuccAeCouUklQXZ6QBoABJe1vK//Ij3I2', 'inbound2', 'Inbound', '2024-03-31 19:57:56', '2024-03-31 19:57:56'),
-(24, 'inbound3@inboud.com', '$2b$10$41mWt0Cl.HIwha6abe43..qVWiGesUYGFOa9sqUXJoEQ9Hwb0IirC', 'inbound3', 'Inbound', '2023-03-31 19:58:18', '2023-03-31 19:58:18'),
-(25, 'inbound4@inboud.com', '$2b$10$aEDY/UkWbxzgpBavASMtZePC/nmCUIud4SbtR.rnCi6Xo3RCYGSDC', 'inbound4@inboud.com', 'Inbound', '2023-03-31 19:58:55', '2023-03-31 19:58:55'),
-(26, 'inbound5@inboud.com', '$2b$10$gXRQSP4N3ZsIwfE9SX0UY.QxYegHOKB5SMVvh8vgRwJv3AI0FnWnm', 'inbound5@inboud.com', 'Inbound', '2023-03-31 19:59:16', '2023-03-31 19:59:16'),
-(27, 'outbound@outbound.com', '$2b$10$FO2fx5dlAf4a.T2yCKtWLO9Y7.2M43IUBq5IRR4K9Q9VLsoqJepQK', 'Outbound', 'Outbound', '2024-03-31 20:00:00', '2024-03-31 20:00:00'),
-(28, 'outbound1@outbound.com', '$2b$10$NUyqG3WfTVscP1eSKpUa7uqy7fjX0bwVZk2nYTAb6Yq94EQMKmmES', 'outbound1@outbound.com', 'Outbound', '2024-03-31 20:00:11', '2024-03-31 20:00:11'),
-(29, 'outbound2@outbound.com', '$2b$10$QuWUwA/VIX/k2hL.oO4DreIO.3Uv/TAYPl48f2bh9F.DR2EHr1WC.', 'outbound2@outbound.com', 'Outbound', '2023-03-31 20:00:22', '2023-03-31 20:00:22'),
-(30, 'outbound3@outbound.com', '$2b$10$KG3LEbyllQH0gM1Nok7XpOjSJ.o3qkhQAeCty7eAbA5Yr5Ng88kuy', 'outbound3@outbound.com', 'Outbound', '2023-03-31 20:00:33', '2023-03-31 20:00:33'),
-(35, 'tulip@yulip.com', '$2b$10$RafqpYshZRr/YdfdGWaaGO4VzMSzQmLRyA3LR8E68D8SmKMRrbXpS', 'Tulip', 'supervisor', '2024-04-04 16:28:10', '2024-04-04 16:28:10'),
-(36, 'teste@validator.com', '$2b$10$uoR1kToFSZXSou1ylF6Gf.ZPPge86A.MBy1XzmIRb.2bNVB9fs7dK', 'pedro', 'admin', '2024-04-05 09:29:26', '2024-04-05 09:29:26');
+(1, 'admin@admin.com', '$2b$10$R5b4KUQu7RRs.pwiO820S.HXABITBByS1TSryQFe1zm8ekVa4yuCu', 'Admin', 'Admin', '2024-04-09 16:25:57', '2024-04-09 16:25:57'),
+(2, 'supervisor@supervisor.com', '$2b$10$FBpXVVS43IF.5/B88UmiceerclU1TZgLVdd/ER.HODRdMcB/eQMdi', 'Supervisor', 'Supervisor', '2024-04-09 16:27:27', '2024-04-09 16:27:27'),
+(3, 'outbound@outbound.com', '$2b$10$4HDh8SnQuGtRweK/h6OHpOY9X7L.6e4A66Lpr5vXGen0BKNB.jace', 'Outbound', 'Outbound', '2024-04-09 16:27:56', '2024-04-09 16:27:56'),
+(4, 'inbound@inbound.com', '$2b$10$H9diVFvVut7u/OFLo/qut.Lrm/iJOhNYhx0WwHrSET8ke6X13HQ8e', 'Inbound', 'Inbound', '2024-04-09 16:28:18', '2024-04-09 16:28:18'),
+(43, 'outboundteste@teste.com', '$2b$10$LXtmouzgu5IXouKluvxB1ec/.aL3gQYKoDDYrOTt9B403JBXN/G..', 'Outbound teste', 'Outbound', '2024-04-10 16:35:56', '2024-04-10 16:35:56'),
+(44, 'teste@teste.com', '$2b$10$jI0OPjWQrsyai/eVv9bafOt9Pbe24ethV1rWXoC60xCgMI.IbF44e', 'teste validator', 'Admin', '2024-04-12 17:05:09', '2024-04-12 17:05:09'),
+(45, 'validatorpassword@teste.com', '$2b$10$cd0Jd5dCjA1UxvfclBRFFuNNv6FbOlM4HWMILoPrtZfSj66RXixfO', 'teste validator password', 'Inbound', '2024-04-12 17:13:27', '2024-04-12 17:13:27');
 
 -- --------------------------------------------------------
 
@@ -369,38 +368,13 @@ CREATE TABLE `user_roles` (
 --
 
 INSERT INTO `user_roles` (`id_user`, `role_id`, `createdAt`, `updatedAt`) VALUES
-(1, 1, '2024-03-21 18:11:10', '2024-04-05 09:26:32'),
-(1, 2, '2024-03-28 09:35:45', '2024-04-05 09:25:36'),
-(2, 1, '2024-03-27 16:36:13', '2024-04-04 04:06:52'),
-(2, 2, '2024-03-21 18:12:19', '2024-04-04 04:06:32'),
-(2, 3, '2024-03-27 16:34:16', '2024-03-27 16:34:16'),
-(2, 4, '2024-03-27 16:32:54', '2024-03-27 16:32:54'),
-(5, 3, '2024-03-22 09:59:09', '2024-03-22 09:59:09'),
-(5, 4, '2024-03-27 16:38:18', '2024-03-27 16:38:18'),
-(6, 2, '2024-03-27 16:42:14', '2024-03-28 10:43:42'),
-(6, 4, '2024-03-22 09:59:40', '2024-03-27 16:39:34'),
-(7, 2, '2024-03-27 11:09:43', '2024-03-27 11:09:43'),
-(7, 3, '2024-03-27 16:37:41', '2024-03-27 16:37:41'),
-(7, 4, '2024-03-27 16:38:54', '2024-03-27 16:38:54'),
-(8, 3, '2024-03-27 11:10:43', '2024-03-27 11:10:43'),
-(8, 4, '2024-03-27 16:39:51', '2024-03-27 16:39:51'),
-(9, 1, '2024-03-27 13:47:58', '2024-03-27 13:47:58'),
-(9, 2, '2024-03-27 16:37:07', '2024-03-27 16:37:07'),
-(9, 4, '2024-03-27 16:40:02', '2024-03-27 16:40:02'),
-(11, 3, '2024-03-27 14:43:19', '2024-03-27 14:43:19'),
-(11, 4, '2024-03-27 16:38:30', '2024-03-27 16:38:40'),
-(21, 2, '2024-03-28 17:53:26', '2024-03-28 17:53:26'),
-(22, 3, '2024-03-31 19:57:38', '2024-04-05 09:32:46'),
-(22, 4, '2024-04-05 09:32:36', '2024-04-05 09:32:36'),
-(23, 3, '2024-03-31 19:57:56', '2024-03-31 19:57:56'),
-(24, 3, '2024-03-31 19:58:18', '2024-03-31 19:58:18'),
-(25, 3, '2024-03-31 19:58:55', '2024-03-31 19:58:55'),
-(26, 3, '2024-03-31 19:59:16', '2024-03-31 19:59:16'),
-(27, 4, '2024-03-31 20:00:00', '2024-03-31 20:00:00'),
-(28, 4, '2024-03-31 20:00:11', '2024-03-31 20:00:11'),
-(29, 4, '2024-03-31 20:00:22', '2024-03-31 20:00:22'),
-(30, 4, '2024-03-31 20:00:33', '2024-03-31 20:00:33'),
-(35, 2, '2024-04-04 16:28:10', '2024-04-04 16:28:10');
+(1, 1, '2024-04-09 16:25:57', '2024-04-09 16:25:57'),
+(2, 2, '2024-04-09 16:27:27', '2024-04-09 16:27:27'),
+(3, 4, '2024-04-09 16:27:56', '2024-04-09 16:27:56'),
+(4, 3, '2024-04-09 16:28:18', '2024-04-09 16:28:18'),
+(43, 4, '2024-04-10 16:35:56', '2024-04-10 16:35:56'),
+(44, 1, '2024-04-12 17:05:09', '2024-04-12 17:05:09'),
+(45, 3, '2024-04-12 17:13:27', '2024-04-12 17:13:27');
 
 --
 -- Índices para tablas volcadas
@@ -445,7 +419,7 @@ ALTER TABLE `interactions`
 --
 ALTER TABLE `interaction_options`
   ADD PRIMARY KEY (`id_option`),
-  ADD KEY `id_interaction` (`id_interaction`);
+  ADD KEY `id_interaction` (`interaction_id`);
 
 --
 -- Indices de la tabla `roles`
@@ -509,7 +483,7 @@ ALTER TABLE `campaigns`
 -- AUTO_INCREMENT de la tabla `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id_customer` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1038;
+  MODIFY `id_customer` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1039;
 
 --
 -- AUTO_INCREMENT de la tabla `interactions`
@@ -533,7 +507,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `todos`
 --
 ALTER TABLE `todos`
-  MODIFY `id_todo` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `id_todo` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
 -- AUTO_INCREMENT de la tabla `types`
@@ -545,7 +519,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id_user` int(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- Restricciones para tablas volcadas
@@ -568,7 +542,7 @@ ALTER TABLE `campaigns`
 -- Filtros para la tabla `interaction_options`
 --
 ALTER TABLE `interaction_options`
-  ADD CONSTRAINT `interaction_options_ibfk_1` FOREIGN KEY (`id_interaction`) REFERENCES `interactions` (`id_interaction`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `interaction_options_ibfk_1` FOREIGN KEY (`interaction_id`) REFERENCES `interactions` (`id_interaction`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `todos`
