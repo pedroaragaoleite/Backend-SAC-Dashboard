@@ -143,6 +143,33 @@ export const getUser = async (req, res) => {
         });
     }
 }
+export const getUserByEmail = async (req, res) => {
+    try {
+        const checkValidation = validationResult(req);
+        if (!checkValidation.isEmpty()) {
+            return res.status(400).json({ errors: checkValidation.array() });
+        }
+        const email = req.params.email;
+        console.log(email);
+        const user = await User.findOne({ where: { email : email } });
+        if (!user) {
+            res.status(404).json({ message: 'No user found!' });
+        }
+
+
+
+        res.status(200).json({
+            message: 'User found!',
+            user            
+        });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            message: 'Something went wrong searching user',
+        });
+    }
+}
 
 export const getRoles = async (req, res) => {
     try {
