@@ -8,7 +8,7 @@ const router = Router();
 
 router.get('/users', authenticateToken, getUsers);
 router.get('/users/:id', authenticateToken, getUser);
-router.get('/users/email/:email', authenticateToken, getUserByEmail);
+router.get('/users/email/:email', getUserByEmail);
 router.get('/roles', authenticateToken, getRoles);
 router.get('/outbound', authenticateToken, getOutboundUsers);
 router.put('/users/:id', authenticateToken, updateValidator, updateUser);

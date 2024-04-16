@@ -24,7 +24,7 @@ const Customer = sequelize.define('Customer', {
         allowNull: false
     },
     postal_code: {
-        type: DataTypes.INTEGER(6),
+        type: DataTypes.STRING(6),
         allowNull: false
     },
     phone: {
