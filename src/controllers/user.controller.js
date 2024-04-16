@@ -155,15 +155,14 @@ export const getUserByEmail = async (req, res) => {
         console.log(email);
         const user = await User.findOne({ where: { email: email } });
         if (!user) {
-            return res.status(200).json({ message: 'No user found!' });
+            return res.status(200).json({ message: 'User not found!' });
         }
 
+        console.log(email);
 
 
-
-        res.status(200).json({
-            message: 'User found!',
-            data: user
+        res.status(404).json({
+            message: 'User found!'
         });
 
     } catch (error) {

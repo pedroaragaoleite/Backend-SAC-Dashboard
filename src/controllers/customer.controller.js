@@ -35,10 +35,11 @@ export const addCustomer = async (req, res) => {
 
         const { name, email, address, city, postal_code, phone } = req.body;
 
-        const existEmail = Customer.findOne({ where: { email } });
-        if (!existEmail) {
+        const existEmail = await Customer.findOne({ where: { email } });
+        const existPhone = await Customer.findOne({ where: { phone: phone } })
+        if (existEmail || existPhone) {
             return res.status(400).json({
-                message: "Email already registered..."
+                message: "Customer already registered..."
             });
         }
 

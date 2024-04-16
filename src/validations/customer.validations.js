@@ -20,6 +20,7 @@ export const customerValidator = [
         .exists().withMessage('City is required')
         .isString().withMessage('City should be a string')
         .isLength({ min: 3 }).withMessage('City should be at least 3 characters')
+        .isLength({ max: 50 }).withMessage('City should not have more than 50 characters')
         .trim(),
     body('postal_code')
         .exists().withMessage('Postal code is required')

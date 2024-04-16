@@ -33,11 +33,11 @@ export const registerValidator = [
         .isLength({ min: 8 })
         .withMessage('Password shoud be at least 8 characters')
         .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/)
-        .withMessage('Password must include uppercase, lowercase, and numeric characters'),
-    body('option')
-        .exists().withMessage('Option is required')
-        .isString().withMessage('Option should be a string')
-        .trim(),
+        .withMessage('Password must include uppercase, lowercase, and numeric characters')
+    // body('option')
+    //     .exists().withMessage('Option is required')
+    //     .isString().withMessage('Option should be a string')
+    //     .trim(),
 ]
 
 export const updateValidator = [

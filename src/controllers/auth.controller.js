@@ -76,35 +76,39 @@ export const loginUser = async (req, res) => {
 }
 
 export const registerUser = async (req, res) => {
-
+  console.log(req.body);
   try {
     const checkValidation = validationResult(req);
     if (!checkValidation.isEmpty) {
-      return res.status(400).json({ errors: validationResult.array() })
+      return res.status(400).json({ errors: checkValidation.array() })
     }
-
+    // console.log(req.body);
     const { username, email, password, role } = req.body;
+    console.log("firsto backend log", email);
 
     // check for existing email 
-    const existEmail = User.findOne({ where: { email } });
-    if (!existEmail) {
+    const existEmail = await User.findOne({ where: { email } });
+    console.log("Existing email: ", existEmail);
+    if (existEmail) {
       return res.status(400).json({
         message: 'Email already registered...'
       });
     };
 
+
     // check for existing username
-    const existUser = User.findOne({ where: { username } });
-    if (!existUser) {
-      return res.status(400).json({
-        message: 'Username already used...'
-      });
-    };
+    // const existUser = User.findOne({ where: { username } });
+    // if (existUser) {
+    //   return res.status(400).json({
+    //     message: 'Username already used...'
+    //   });
+    // };
 
     // passworod hash
     const password_hash = await bcrypt.hash(password, 10);
 
 
+    // console.log(email);
     // insert user
     const newUser = await User.create({ email, password: password_hash, username, role });
 
